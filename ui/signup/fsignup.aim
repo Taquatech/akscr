@@ -1,0 +1,14 @@
+<aim-local-data>
+    {
+       
+        "PageID":"signinform",
+        "Banner":{
+            "Background":"aim://root://asset/images/akw.jpg","Logo":"aim://root://asset/images/logo2.png",
+            "Text":"AKSG RECRUITMENT PORTAL"
+        }
+    }
+</aim-local-data>
+<aim-widget page id="{{PageID}}" banner="{{Banner->Background}}" bannerLogo="{{Banner->Logo}}">
+    <bannerText><strong style="font-size: 1.4em;">{{Banner->Text}}</strong></bannerText>
+    <aim-import>@root://ui/signup/signup.aim</aim-import>
+</aim-widget>

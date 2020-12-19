@@ -1,0 +1,73 @@
+<% @root://engine/main.php MemberDetailsID %>
+
+    <aim-widget mainhead logo="mbri-setting" title="AKRP - Qualification" backClass="aim-datafill aim-trigger">
+        <backAttr>aim-src="root://ui/activate/idcard.aim" aim-container="signinform" aim-execute="Process"</backAttr>
+            </aim-widget>
+            <aim-widget window-wider></aim-widget>
+            <aim-widget mainbody id="mainbody">
+                <aim-widget pageform id="createacc_form">
+                <!-- TextBox -->
+                <aim-widget pagepadding class="fadeInUp animated delay-0-2s">
+                    <!-- <div class="aprs-height-20px"></div> -->
+                    <!-- Name  -->
+                 <input type="hidden" name="UPhone" id="Uphone" aim-datafield="UPhone" value="{{Phone}}" class="fdgffffgbhgghhg">
+                 <input type="hidden" name="MID" id="MID" aim-datafield="MID" value="{{ID}}" class="fdgffffgbhgghhg">
+                 <input type="hidden" name="RegLevel" id="RegLevel" aim-datafield="RegLevel" value="4" class="fdgffffgbhgghhg">
+                 <div class="aprs-strong aprs-text-forecolor w3-large">{{Surname}} {{Firstname}} {{Middlename}}</div>
+                 <div class="aprs-strong w3-large">Qualification</div>
+             <div class="aprs-height-20px"></div>
+                 <!-- <aim-widget textbox id="bvn" label="Bank Verification Number" placeholder="Input BVN" type="number" class="fadeInUp animated delay-0-3s" aim-datafield="BVN" iclass="fdgffffgbhg" value="{{BVN}}" ></aim-widget>
+                 <div class="aprs-height-20px"></div> -->
+                 <aim-widget textgroup >
+                    <aim-widget textbox id="fsch" label="First School Certificate" placeholder="School Name" type="text" class="fadeInUp animated delay-0-4s" aim-datafield="FSLCSchName" iclass="createacc_data"  ></aim-widget>
+                    <aim-widget textbutton id="certdate" label="" placeholder="DD/MM/YYYY - Date" type="text" class=""  aim-datafield="FSLCDate" iclass="fdgffffgbhg" value=""  >
+                        <buttonText><i class="mbri-calendar aprs-strong aim-calender-ctr"></i></buttonText>
+                        <buttonClass>aim-trigger aim-calendar aim-calender-ctr</buttonClass>
+                        <buttonAttr>aim-calendar-selected-class="aprs-forecolor" aim-calendar-today-class="aprs-forecolor" aim-calendar-body-style="top:20px" aim-calendar-caption="Certificate Date" aim-calendar-target="certdate"</buttonAttr>
+                    </aim-widget>
+                    <aim-widget imagebox id="idScan" label="" src="aim://ui://images/upload.png" maxsize="600000" iclass="fdgffffgbhg" aim-datafield="ScanFSCLCert"></aim-widget>
+                </aim-widget>
+                    <div class="aprs-height-40px"></div>
+                    
+                    <aim-widget textgroup >
+                    <aim-widget textbox id="fsch" label="O'Level Certificate" placeholder="School Name" type="text" class="fadeInUp animated delay-0-4s" aim-datafield="OLvSchName" iclass="createacc_data"  ></aim-widget>
+                    <aim-widget textbutton id="certdatec" label="" placeholder="DD/MM/YYYY - Date" type="text" class=""  aim-datafield="FOLDate" iclass="fdgffffgbhg" value=""  >
+                        <buttonText><i class="mbri-calendar aprs-strong aim-calender-ctr"></i></buttonText>
+                        <buttonClass>aim-trigger aim-calendar aim-calender-ctr</buttonClass>
+                        <buttonAttr>aim-calendar-selected-class="aprs-forecolor" aim-calendar-today-class="aprs-forecolor" aim-calendar-body-style="top:20px" aim-calendar-caption="Certificate Date" aim-calendar-target="certdatec"</buttonAttr>
+                    </aim-widget>
+                    <aim-widget imagebox id="idScano" label="" src="aim://ui://images/upload.png" maxsize="600000" iclass="fdgffffgbhg" aim-datafield="ScanOlvCert"></aim-widget>
+                    <aim-widget dropdown id="olvltoSt" label="Exam Type" placeholder="Exam Type" iclass="fdgffffgbhg" aim-datafield="ExmType">
+                        <option value="1">WAEC</option>
+                        <option value="2">WAEC (GCE)</option>
+                        <option value="3">NECO</option>
+                        <option value="4">NECO (GCE)</option>
+                        <option value="5">NABTEB</option>
+                    </aim-widget>
+                </aim-widget>
+                <div class="aprs-height-40px"></div>
+                <aim-widget textgroup >
+                    <aim-widget textbox id="fschc" label="Higher Certificate" placeholder="School Name" type="text" class="fadeInUp animated delay-0-4s" aim-datafield="OdSchName" iclass="createacc_data"  ></aim-widget>
+                    <aim-widget textbutton id="certdatew" label="" placeholder="DD/MM/YYYY - Date" type="text" class="" aim-datafield="FOdLDate" iclass="fdgffffgbhg" value=""  >
+                        <buttonText><i class="mbri-calendar aprs-strong aim-calender-ctr"></i></buttonText>
+                        <buttonClass>aim-trigger aim-calendar aim-calender-ctr</buttonClass>
+                        <buttonAttr>aim-calendar-selected-class="aprs-forecolor" aim-calendar-today-class="aprs-forecolor" aim-calendar-body-style="top:20px" aim-calendar-caption="Certificate Date" aim-calendar-target="certdatew"</buttonAttr>
+                    </aim-widget>
+                    <aim-widget imagebox id="idScando" label="" src="aim://ui://images/upload.png" maxsize="600000" iclass="fdgffffgbhg" aim-datafield="ScanOlvdCert"></aim-widget>
+                    <aim-widget dropdown id="olvltoSt" label="Award" placeholder="Award" iclass="fdgffffgbhg" aim-datafield="ExmType">
+                        <option value="1">NCE</option>
+                        <option value="2">ND</option>
+                        <option value="3">HND</option>
+                        <option value="4">BSC</option>
+                        <option value="5">MSC</option>
+                        <option value="6">PHD</option>
+                    </aim-widget>
+                </aim-widget>
+                 
+
+                 <div class="aprs-height-40px"></div>
+                    <aim-widget btn id="activateaccnxtbtn" class="fadeInUp animated delay-1s aim-datafill aim-trigger" aim-src="root://ui/activate/updatemem.aim" aim-container="signinform" aim-execute="Process" aim-data="{{fdgffffgbhgghhg}}" type="submit" >Next</aim-widget>
+                 <div class="aprs-height-30px"></div>
+                 </aim-widget>
+                 </aim-widget>
+                 </aim-widget>
